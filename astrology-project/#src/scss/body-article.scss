@@ -1,0 +1,121 @@
+.paper {
+
+    &__body {
+    }
+
+    &__top {
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        padding: 0 0 25% 0;
+        position: relative;
+        @media (max-width: 987px) {
+            padding: 0 0 35% 0;
+        }
+        @media (max-width: $md4+px) {
+            padding: 0 0 50% 0;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__wrap {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+    }
+
+    &__category {
+        // background-color: rgba(177, 28, 136, 0.9);
+        background-color: #b11c88;
+        border-radius: 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        text-align: center;
+        transition: all 0.3s ease 0s;
+        margin: 0 0 15px 0;
+        cursor: pointer;
+        &:hover {
+            background-color: #9D1979;
+
+        }
+        @media (max-width: 654px) {
+            padding: 10px;
+        }
+        a {
+            color: $textColor;
+            text-transform: uppercase;
+            @include adaptive-value("font-size", 16, 8, 1);
+        }
+    }
+
+    &__title {
+        @include adaptive-value("font-size", 46, 22, 1);
+        color: $textColor;
+        z-index: 5;
+        max-width: 500px;
+        @media (min-width: 994px) {
+            max-width: 600px;
+        }
+        @media (max-width: 564px) {
+            max-width: 400px;
+        }
+        @media (max-width: $md4 + px) {
+            max-width: 250px;
+        }
+    }
+
+    &__bg {
+        background-color: #fff;
+    }
+
+    &__crumbs {
+        max-width: 734px;
+        margin: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        @include adaptive-value("padding-top", 50, 20, 1);
+        @include adaptive-value("font-size", 16, 14, 1);
+        li a {
+            color: #000;
+        }
+    }
+
+    &__text-body {
+        max-width: 734px;
+        margin: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        @include adaptive-value("padding-top", 50, 20, 1);
+        @include adaptive-value("padding-bottom", 50, 20, 1);
+    }
+
+    &__text {
+        color: #000;
+        font-size: 18px;
+        line-height: 150%;
+        p {
+            margin: 0 0 15px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 20px;
+        }
+    }
+}
+

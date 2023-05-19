@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Калькулятор расчета обоев</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__body">
+                    <div class="header__icon">
+                        <img src="img/icon.svg" alt="icon">
+                    </div>
+                    <div class="header__logo">Строительные <br>калькуляторы</div>
+                </div>
+            </div>
+        </header>
+        <main class="page">
+            <div class="page__container container">
+                <div class="page__body">
+                    <div class="page__calc calc">
+                        <div class="calc__title">Калькулятор расчета обоев</div>
+                        <div class="calc__wrapper">
+                            <div class="calc__room room">
+                                <div class="room__title title">Размеры комнаты</div>
+                                <div class="room__param param">
+                                    <div class="param__measure">
+                                        <label for="param__calc" class="param__title">Длина комнаты</label>
+                                        <div class="param__wrap">
+                                            <input type="number" min="0" class="param__calc" placeholder="4" value="4"
+                                                id="roomLength">
+                                            <span class="param__dimension">м</span>
+                                        </div>
+                                    </div>
+                                    <div class="param__measure">
+                                        <label for="param__calc" class="param__title">Ширина комнаты</label>
+                                        <div class="param__wrap">
+                                            <input type="number" min="0" class="param__calc" placeholder="4" value="4"
+                                                id="roomWidth">
+                                            <span class="param__dimension">м</span>
+                                        </div>
+                                    </div>
+                                    <div class="param__measure">
+                                        <label for="param__calc" class="param__title">Высота комнаты</label>
+                                        <div class="param__wrap">
+                                            <input type="number" min="0" class="param__calc" placeholder="2.5"
+                                                value="2.5" id="roomHeight">
+                                            <span class="param__dimension">м</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calc__paper paper">
+                                <div class="paper__title title">Размеры рулона</div>
+                                <div class="paper__param param">
+                                    <div class="param__measure">
+                                        <label for="param__calc" class="param__title">Ширина рулона</label>
+                                        <div class="param__wrap">
+                                            <input type="number" min="0" class="param__calc" placeholder="0.53"
+                                                value="0.53" id="paperWidth">
+                                            <span class="param__dimension">м</span>
+                                        </div>
+                                    </div>
+                                    <div class="param__measure">
+                                        <label for="param__calc" class="param__title">Длина рулона</label>
+                                        <div class="param__wrap">
+                                            <input type="number" min="0" class="param__calc" placeholder="10" value="10"
+                                                id="paperLength">
+                                            <span class="param__dimension">м</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calc__btn" id="paperBtn">Рассчитать</div>
+                            <div class="calc__result result">
+                                <div class="result__amount">Количество рулонов: <span>6</span></div>
+                                <div class="result__amount">Площадь стен под обои: <span>18</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__calc calc">
+                        <div class="calc__title">Калькулятор расчета ламината</div>
+                        <div class="calc__wrapper">
+                            <div class="calc__room room">
+                                <div class="room__title title">Размеры комнаты</div>
+                                <div class="room__param param">
+                                    <div class="param__measure">
+                                        <label for="param__calc" class="param__title">Длина комнаты</label>
+                                        <div class="param__wrap">
+                                            <input type="number" min="0" class="param__calc" placeholder="5" value="5"
+                                                id="roomLengthLam">
+                                            <span class="param__dimension">м</span>
+                                        </div>
+                                    </div>
+                                    <div class="param__measure">
+                                        <label for="param__calc" class="param__title">Ширина комнаты</label>
+                                        <div class="param__wrap">
+                                            <input type="number" min="0" class="param__calc" placeholder="4" value="4"
+                                                id="roomWidthLam">
+                                            <span class="param__dimension">м</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calc__paper paper">
+                                <div class="paper__title title">Размеры ламината</div>
+                                <div class="paper__param param">
+                                    <div class="param__measure">
+                                        <label for="param__calc" class="param__title">Ширина доски ламината</label>
+                                        <div class="param__wrap">
+                                            <input type="number" min="0" class="param__calc" placeholder="193"
+                                                value="193" id="lamWidth">
+                                            <span class="param__dimension">мм</span>
+                                        </div>
+                                    </div>
+                                    <div class="param__measure">
+                                        <label for="param__calc" class="param__title">Длина доски ламината</label>
+                                        <div class="param__wrap">
+                                            <input type="number" min="0" class="param__calc" placeholder="1291"
+                                                value="1291" id="lamLength">
+                                            <span class="param__dimension">мм</span>
+                                        </div>
+                                    </div>
+                                    <div class="param__measure">
+                                        <label for="param__calc" class="param__title">Число досок в упаковке</label>
+                                        <div class="param__wrap">
+                                            <input type="number" min="0" class="param__calc" placeholder="8" value="8"
+                                                id="lamAmount">
+                                            <span class="param__dimension">шт</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calc__btn" id="lamBtn">Рассчитать</div>
+                            <div class="calc__result result result-lam">
+                                <div class="result__amount">Количество досок ламината: <span>6</span></div>
+                                <div class="result__amount">Количество упаковок ламината: <span>18</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__body">
+                <div class="footer__text">Franel, 2021</div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Астроуслуги</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('_header.html')
+        <main class="page">
+            <section class="page__calendar calendar">
+                <div class="calendar__container container">
+                    <div class="calendar__body">
+                        <div class="calendar__img">
+                            <div class="calendar__example">
+                                <img id="zoomOne" class="calendar__example-img" src="img/calendars/8.jpg" alt="">
+                            </div>
+                            <div class=" calendar__example">
+                                <img id="zoomTwo" class="calendar__example-img" src="img/calendars/7.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="calendar__wrap">
+                            <div class="calendar__info info-calendar">
+                                <div class="info-calendar__title">Календарь холостой луны. Неэффективные периоды</div>
+                                <div class="info-calendar__text">
+                                    <p> За месяц Луна проходит путь по всему зодиакальному кругу от знака Овна до
+                                        Рыб. И
+                                        на
+                                        этом пути взаимодействует с другими планетами. В период когда Луна сделала
+                                        последний
+                                        точный аспект, но еще не перешла в следующий знак зодиака, она оказывает
+                                        негативное
+                                        влияние на многие жизненные ситуации. Такое явление происходит каждые 2-3
+                                        дня и
+                                        длится от нескольких минут до нескольких часов. И очень сильно влияет на все
+                                        наши
+                                        начинания.</p>
+                                    <br>
+                                    <p>Эти периоды
+                                        считаются неблагоприятными для начала любого нового дела, подписания важных
+                                        документов, договоров, регистрации брака\развода., для первого свиданья,
+                                        покупки
+                                        подарков, регистрации и перерегистрации недвижимости, собеседования, визита
+                                        к
+                                        врачу,
+                                        косметологу, парикмахеру, бровисту, для операций, сдачи анализов, начала
+                                        курса
+                                        лечения, для шопинга, особенно дорогостоящих покупок, для начала
+                                        ремонта.Зато
+                                        благоприятно для: любого вида отдыха, занятий текущими или бытовыми делами,
+                                        погашения долгов, кредитов, налогов, штрафов.Если расстались с кем-то, в
+                                        этот
+                                        период, то в большинстве случаев это навсегда.</p>
+
+                                </div>
+                            </div>
+                            <hr class="calendar__hr">
+                            <div class="calendar__buy buy-calendar">
+                                <div class="buy-calendar__text">Стоимость: 99 рублей</div>
+                                <div class="buy-calendar__btn">Купить</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('_footer.html')
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Услуга «Кот здоров»</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="page">
+            <section class="page__main main">
+                <div class="main__body">
+                    <div class="main__bg">
+                        <div class="main__container container">
+                            <div class="main__top top">
+                                <div class="top__wrap">
+                                    <div class="top__body">
+                                        <div class="top__content">
+                                            <div class="top__title">Введите код из SMS</div>
+                                            <div class="top__field-wrapper code">
+                                                <div class="code__field js-form">
+                                                    <div class="code__wrap">
+                                                        <input class="code__input js-input-number" type="number"
+                                                            pattern="[0-9]*" maxlength="1" value="" inputtype="numeric"
+                                                            autocomplete="one-time-code" id="otc-1" required>
+                                                        <input class="code__input js-input-number" type="number"
+                                                            pattern="[0-9]*" value="" inputtype="numeric" id="otc-2"
+                                                            required>
+                                                        <input class="code__input js-input-number" type="number"
+                                                            pattern="[0-9]*" value="" inputtype="numeric" id="otc-3"
+                                                            required>
+                                                        <input class="code__input js-input-number" type="number"
+                                                            pattern="[0-9]*" value="" inputtype="numeric" id="otc-4"
+                                                            required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="top__annotation annotation">
+                                                <div class="annotation__content">
+                                                    <div class="annotation__text">
+                                                        Код отправлен на номер <br>
+                                                        <span>+7 987 654 32 01.</span>
+                                                    </div>
+                                                    <div class="annotation__text">
+                                                        Запросить код снова можно через 23 сек.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="code__btn btn">Отправить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.1/jquery.inputmask.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

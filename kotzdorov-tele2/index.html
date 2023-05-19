@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Услуга «Кот здоров»</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="page">
+            <header class="page__header header">
+                <div class="header__container container">
+                    <div class="header__images">
+                        <div class="header__logo-link">
+                            <img src="img/tele2logo.svg" alt="tele2">
+                        </div>
+                        <div class="header__logo">
+                            <img src="img/kotzdorov-logo.svg" alt="KotZdorov">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="page__teaser teaser">
+                <div class="teaser__body">
+                    <div class="teaser__bg">
+                        <div class="desktop__container container">
+                            <div class="desktop-text">
+                                <div class="desktop-text__title">
+                                    Услуга <br>«Кот Здоров»
+                                </div>
+                                <div class="desktop-text__description">
+                                    <li>онлайн-консультации ветеринара</li>
+                                    <li>расшифровки анализов</li>
+                                    <li>советы по уходу</li>
+                                </div>
+                                <a id="toSubscription" class="desktop-text__btn btn" href="#subsription">
+                                    Подключить
+                                </a>
+                                <div class="desktop-text__smalltext">
+                                    Первые три дня - 0 руб., далее - 15 руб./сут.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teaser__container container">
+                        <div class="teaser__text text-teaser">
+                            <div class="text-teaser__title">
+                                <div class="text-teaser__wrap-title">
+                                    <div class="text-teaser__span">
+                                        Услуга <br>«Кот Здоров»
+                                    </div>
+                                    <div id="toAnchor">
+                                        <a class="text-teaser__icon" href="#anchor" id="btnAnchor">
+                                            <img src="img/expander.svg" alt="arrow">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teaser__bio container" id="anchor">
+                        <div class="text-teaser__description">
+                            <li>онлайн-консультация ветеринара</li>
+                            <li>расшифровки анализов</li>
+                            <li>советы по уходу</li>
+                        </div>
+                        <a id="teaserToSubscription" class="text-teaser__btn btn" href="#subsription">
+                            Подключить
+                        </a>
+                        <div class="text-teaser__smalltext">
+                            Первые три дня - 0 руб., далее - 15 руб./сут.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page__points points">
+                <div class="points__container container">
+                    <div class="points__body">
+                        <div class="points__content content-points">
+                            <div class="content-points__step">
+                                <div class="content-points__wrap">
+                                    <div class="content-points__icon _icon-union"></div>
+                                    <div class="content-points__title">Профессиональная помощь</div>
+                                </div>
+                                <div class="content-points__text">
+                                    Не ищите ответы на форумах и не тратьте свое время, опытные врачи-ветеринары дадут
+                                    рекомендации и направят на лечение
+                                </div>
+                            </div>
+                            <div class="content-points__step">
+                                <div class="content-points__wrap">
+                                    <div class="content-points__icon _icon-help"></div>
+                                    <div class="content-points__title">Любые вопросы</div>
+                                </div>
+                                <div class="content-points__text">
+                                    Вы можете спросить специалистов о правильном питании и уходе, вакцинации,
+                                    чипировании, травмах, стерилизации и кастрации и многом другом
+                                </div>
+                            </div>
+                            <div class="content-points__step">
+                                <div class="content-points__wrap">
+                                    <div class="content-points__icon _icon-clock"></div>
+                                    <div class="content-points__title">Круглосуточно</div>
+                                </div>
+                                <div class="content-points__text">
+                                    Консультации доступны в любое время 24/7 без выходных. Чтобы получить консультацию,
+                                    наберите <a href="tel:88005559971">8 800 555 99 71</a> или выберите удобное время в
+                                    <a href="" class="content-points__link">личном кабинете</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page__subscription subscription" id="subsription">
+                <div class="subscription__triangle"></div>
+                <div class="subscription__container container">
+                    <div class="subscription__body">
+                        <div class="subscription__content sub">
+                            <div class="sub__title">
+                                Подключите услугу и пользуйтесь 3 дня бесплатно
+                            </div>
+                            <div class="sub__field js-form">
+                                <label class="sub__label" for="telField">
+                                    <div class="sub__wrap">
+                                        <input id="telField" class="sub__input js-input-phone" type="tel"
+                                            data-mask="tel" placeholder="Введите номер телефона" required>
+                                        <div class="sub__img">
+                                            <img src="img/false.svg" alt="alert">
+                                        </div>
+                                        <div class="sub__img_true">
+                                            <img src="img/true.svg" alt="true">
+                                        </div>
+                                    </div>
+                                    <span class="sub__warning js-warning">
+                                        <span class="sub__warning_message">Некорректный номер телефона</span>
+                                        <span class="sub__warning_correct">Kорректный номер телефона</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <button class="sub__btn btn js-form-submit">Подключить</button>
+                            <div class="sub__smalltext">Первые три дня - 0 руб., далее - 15 руб./сут.</div>
+                            <div class="sub__activation-text text-active">
+                                <div class="text-active__title">или наберите на телефоне команду *356# </div>
+                                <div class="text-active__text">Для подключения услуги введите код из SMS с номера 3912,
+                                    который мы направим на ваш номер телефона. Вводя код из SMS и нажимая «Подтвердить»,
+                                    вы принимаете оферты <a href="https://f.tele2.ru/offer/" target="_blank">Tele2</a>,
+                                    <a target="_blank"
+                                        href="https://xn--80aaanetpw3ba4m.xn--p1ai/wp-content/uploads/Oferta_platezhnogo_servisa_Tele2_RNKO.pdf">«ООО
+                                        РНКО «Единая Касса»</a> и <a href="http://xn--b1adilucapo.xn--p1ai/terms/"
+                                        target="_blank">ООО «КИП»</a>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page__questions questions">
+                <div class="questions__container container">
+                    <div class="questions__body">
+                        <div class="questions__content">
+                            <div class="questions__title">Вопросы и ответы</div>
+                            <div class="questions__accordion accordion">
+                                <div class="accordion__item">
+                                    <div class="accordion__wrap">
+                                        <div class="accordion__title">Как ветеринар поможет мне дистанционно?</div>
+                                        <div class="accordion__arrow _icon-arrow"></div>
+                                    </div>
+                                    <div class="accordion__content">Как правило, ветеринар может ответить на более 70%
+                                        вопросов по уходу, воспитанию и самочувствию вашего питомца удаленно. Он ответит
+                                        на
+                                        срочные вопросы, чтобы вы не тратили время на дорогу до ветеринарной клиники,
+                                        поможет определить, нужно ли сдавать анализы и проводить диагностику. Опытный
+                                        врач
+                                        сразу подскажет, что необходимо делать, стоит ли волноваться и обращаться в
+                                        клинику.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questions__accordion accordion">
+                                <div class="accordion__item">
+                                    <div class="accordion__wrap">
+                                        <div class="accordion__title">В какое время можно позвонить врачу?</div>
+                                        <div class="accordion__arrow _icon-arrow"></div>
+                                    </div>
+                                    <div class="accordion__content">Опытные врачи-ветеринары доступны для консультации
+                                        круглосуточно 7 дней в неделю. Получить консультацию можно по телефону
+                                        <a href="tel:88005559971">8 800 555 99 71</a> или в <a href=""
+                                            class="accordion__link">личном кабинете</a>. Даже ночью вы можете
+                                        задать любой
+                                        вопрос специалисту и избежать
+                                        дополнительного
+                                        стресса.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questions__accordion accordion">
+                                <div class="accordion__item">
+                                    <div class="accordion__wrap">
+                                        <div class="accordion__title">На какие вопросы я могу получить ответ?</div>
+                                        <div class="accordion__arrow _icon-arrow"></div>
+                                    </div>
+                                    <div class="accordion__content">Вы можете задавать вопросы по уходу за вашим
+                                        любимцем,
+                                        кормлению, вакцинации, чипированию, стерилизации и кастрации, подготовке к
+                                        операциям
+                                        и уходу после.
+                                        При появлении симптомов недомогания у животного или травмах ветеринар подскажет
+                                        вам
+                                        необходимый алгоритм действий. Вы также можете обратиться к специалисту за
+                                        расшифровкой результатов анализов или получить второе мнение по ранее
+                                        поставленному
+                                        диагнозу.
+                                        Наши врачи помогают не только кошкам и собакам, но и грызунам, птицам,
+                                        экзотическим
+                                        животным, крупному и мелкому рогатому скоту.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questions__accordion accordion">
+                                <div class="accordion__item">
+                                    <div class="accordion__wrap">
+                                        <div class="accordion__title">Какие специалисты у вас есть?</div>
+                                        <div class="accordion__arrow _icon-arrow"></div>
+                                    </div>
+                                    <div class="accordion__content">Для вас работают врачи общей практики, хирурги,
+                                        кардиологи, анестезиологи, репродуктологи, зоопсихологи, диетологи. Вы всегда
+                                        можете
+                                        позвонить по телефону <a href="tel:88005559971">8 800 555 99 71</a> и получить
+                                        квалифицированную консультацию
+                                        по
+                                        любому вопросу.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questions__accordion accordion">
+                                <div class="accordion__item">
+                                    <div class="accordion__wrap">
+                                        <div class="accordion__title">Может ли ветеринар поставить диагноз онлайн?</div>
+                                        <div class="accordion__arrow _icon-arrow"></div>
+                                    </div>
+                                    <div class="accordion__content">Ветеринар формирует свое заключение и рекомендации
+                                        на
+                                        основе предоставленных вами данных. В случае, если осмотр животного произвести
+                                        невозможно либо требуется получение дополнительной информации (результатов
+                                        осмотров,
+                                        анализов), специалист подскажет рекомендуемые методы диагностики, лечения,
+                                        уведомит
+                                        о связанных с ними рисках, их последствиях и ожидаемых результатах. При
+                                        необходимости ветеринар посоветует, как подготовиться к посещению ветеринарной
+                                        клиники и сэкономить на ненужных анализах.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="questions__accordion accordion">
+                                <div class="accordion__item">
+                                    <div class="accordion__wrap">
+                                        <div class="accordion__title">Как отключить услугу?</div>
+                                        <div class="accordion__arrow _icon-arrow"></div>
+                                    </div>
+                                    <div class="accordion__content">Отправьте SMS со словом СТОП на номер 3912.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="page__footer footer">
+                <div class="footer__container container">
+                    <div class="footer__body">
+                        <div class="footer__content">
+                            Услуга предоставляется ООО «КИП» на условиях <a
+                                href="http://xn--b1adilucapo.xn--p1ai/terms/" target="_blank">оферты</a>. Оплата
+                            осуществляется переводом с
+                            лицевого счета абонента Tele2 на условиях <a href="https://f.tele2.ru/offer/"
+                                target="_blank">оферты</a> и условиях <a
+                                href="https://xn--80aaanetpw3ba4m.xn--p1ai/wp-content/uploads/Oferta_platezhnogo_servisa_Tele2_RNKO.pdf"
+                                target="_blank">оферты</a> «ООО РНКО «Единая
+                            Касса»».
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.1/jquery.inputmask.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

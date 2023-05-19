@@ -1,0 +1,1054 @@
+@font-face {
+    font-family: "StandardStencil";
+    src: url(../fonts/StandardStencil-Bold_media.otf);
+  }
+
+@font-face {
+    font-family: "Tele2DisplaySerif";
+    src: url(../fonts/Tele2DisplaySerif-Regular-shortWeb_0.ttf);
+}
+
+@font-face {
+    font-family: "Tele2TextSans";
+    src: url(../fonts/Tele2TextSans-Regular-shortWeb_0.ttf);
+}
+
+@font-face {
+    font-family: "Tele2TextSansBold";
+    src: url(../fonts/Tele2TextSans-Bold-shortWeb_0.ttf);
+}
+
+@font-face {
+    font-family: "Tele2DisplaySerifBold";
+    src: url(../fonts/Tele2DisplaySerif-Bold-shortWeb_0.ttf);
+}
+
+
+
+@font-face {
+    font-family: 'icons';
+    src:
+      url('../fonts/icons.ttf?1ojlpy') format('truetype'),
+      url('../fonts/icons.woff?1ojlpy') format('woff'),
+      url('../fonts/icons.svg?1ojlpy#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+._icon-arrow:before {
+    content: "\e903";
+  }
+  ._icon-union:before {
+    content: "\e900";
+  }
+  ._icon-help:before {
+    content: "\e901";
+  }
+  ._icon-clock:before {
+    content: "\e902";
+  }
+
+._icon-union, ._icon-help, ._icon-clock, ._icon-arrow {
+    font-family: 'icons';
+}
+
+$mainColor: #1F2229;
+$yellowColor: #D7FF38;
+$grayColor: #8F9399;
+$fontFamilyStandardStencil: 'StandardStencil';
+$fontFamilyDisplay: 'Tele2DisplaySerif';
+$fontFamilyTextSans: 'Tele2TextSans';
+$fontSize: 16px;
+$Tele2DisplaySerifBold: 'Tele2DisplaySerifBold';
+$Tele2TextSansBold: 'Tele2TextSansBold';
+
+$minWidth: 320px;
+$maxWidth: 1440;
+// $maxWidthContainer: 1182; // ширина 1152px, но добавляем еще 30px
+$maxWidthContainer: 954; // ширина 924px, но добавляем еще 30px
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md3: 479.98;
+$md4: 425.98;
+
+
+@import "null.scss";
+@import "adaptive-value.scss";
+@import "header.scss";
+@import "footer.scss";
+
+
+body {
+    font-family: $fontFamilyTextSans;
+    font-size: $fontSize;
+    color: $mainColor;
+    &._lock {
+        overflow: hidden;
+    }
+}
+
+.ibg{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+    
+.ibg img {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+}
+
+.container {
+    max-width: 954px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.page {
+    &__header {
+    }
+
+    &__teaser {
+    }
+
+    &__points {
+        background-color: #1F2229;
+        position: relative;
+        z-index: 5;
+        @media (max-width: 585px) {
+            padding: 0 0 50px 0;
+            background: linear-gradient(-11deg, transparent 80px, #D7FF38 0) right;
+        }
+    }
+
+    &__subscription {
+    }
+
+    &__questions {
+    }
+
+    &__footer {
+    }
+}
+
+.header {
+    padding: 15px 0;
+    border-bottom: 1px solid #d1dbd6;
+
+    &__container {
+    }
+
+    &__images {
+        display: flex;
+    }
+
+    &__logo-link {
+        width: 88px;
+        &:not(:last-child) {
+            margin: 0 18px 0 0;
+        }
+    }
+
+    &__logo {
+        width: 50px;
+    }
+}
+
+.desktop__container {
+    height: 54vw;
+    @media (min-width: 1440px) {
+        height: 622px;
+    }
+    @media (max-width: 768px) {
+        height: 60vw;
+    }
+    @media (max-width: 585px) {
+        height: auto;
+    }
+}
+
+.teaser {
+    position: relative;
+
+    &__bg {
+        background: url(../img/smallDesktop.webp) no-repeat center bottom;
+        background-size: auto 54vw;
+        @media (min-width: 1440px) { 
+            background-size: auto 628px;
+            &:before {
+                content: "";
+                position: absolute;
+                right: 50%;
+                top: 0;
+                margin-right: 610px;
+                bottom: 0;
+                width: 100vw;
+                background: #D7FF38;
+            }
+        }
+        @media (max-width: 768px) {
+            background: url(../img/tabletBackground.webp) no-repeat center bottom;
+            background-size: auto 60vw;
+        }
+        @media (max-width: 585px) {
+            background: url(../img/mobile.png) no-repeat center bottom;
+            background-size: cover;
+            padding: 20px 0 100% 0;
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__text {
+    }
+
+    &__bio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 585px) {
+            margin: 0 0 25px 0;
+        }
+    }
+
+}
+
+.desktop-text {
+    display: none;
+    @media (min-width: 586px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+    }
+
+    &__title {
+        @media (min-width: 586px) {
+            font-family: $fontFamilyStandardStencil;
+            text-transform: uppercase;
+            @include adaptive-value('font-size', 57, 26, 1);
+            @include adaptive-value('line-height', 55, 28, 1);
+            &:not(:last-child) {
+            @include adaptive-value('margin-bottom', 36, 18, 1);
+            @include adaptive-value('padding-top', 120, 30, 1);
+            }
+        }
+    }
+
+    &__description {
+        @include adaptive-value('font-size', 22, 18, 1);
+        @include adaptive-value('line-height', 26, 22, 1);
+        &:not(:last-child) {
+            @include adaptive-value('margin-bottom', 36, 18, 1);
+        }
+    }
+
+    &__btn {
+        font-family: $Tele2TextSansBold;
+        border: 2px solid #1F2229;
+        border-radius: 30px;
+        padding: 19px 45px;
+        color: #1F2229;
+        transition: all 0.3s ease 0s;
+        &:not(:last-child) {
+            margin: 0 0 12px 0;
+        }
+        &:hover {
+            border-color: #8f9399;
+            color: #8f9399;
+        }
+    }
+
+    &__smalltext {
+        max-width: 180px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.text-teaser {
+    @media (max-width: 585px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        display: none;
+        @media (max-width: 585px) {
+            font-family: $fontFamilyStandardStencil;
+            text-transform: uppercase;
+            @include adaptive-value('font-size', 57, 26, 1);
+            @include adaptive-value('line-height', 55, 28, 1);
+            &:not(:last-child) {
+            @include adaptive-value('margin-bottom', 36, 18, 1);
+            }
+
+            position: absolute;
+            bottom: -10px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 15px;
+        }
+    }
+
+    &__wrap-title {
+        @media (max-width: 585px) {
+            width: 100%;
+            background-color: #1F2229;
+            padding: 18px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include adaptive-value('height', 380, 100, 1);
+        }
+    }
+
+    &__span {
+        @media (max-width: 585px) {
+            &:not(:last-child) {
+                margin: 0 16px 0 0;
+            }
+        }
+    }
+
+    &__description {
+        display: none;
+        @media (max-width: 585px) {
+            display: block;
+            margin-top: 26px;
+            @include adaptive-value('font-size', 22, 18, 1);
+            @include adaptive-value('line-height', 26, 22, 1);
+            &:not(:last-child) {
+                @include adaptive-value('margin-bottom', 36, 18, 1);
+            }
+        }
+    }
+
+    &__btn {
+        display: none;
+        @media (max-width: 585px) {
+            font-family: $Tele2TextSansBold;
+            display: inline-block;
+            border: 2px solid #1F2229;
+            border-radius: 30px;
+            padding: 19px 45px;
+            color: #1F2229;
+            transition: all 0.3s ease 0s;
+            &:not(:last-child) {
+                margin: 0 0 6px 0;
+            }
+            &:hover {
+                border-color: #8f9399;
+                color: #8f9399;
+            }
+        }
+    }
+
+    &__smalltext {
+        display: none;
+        @media (max-width: 585px) {
+            display: block;
+            font-size: 14px;
+            line-height: 18px;
+            color: #8F9399;
+        }
+    }
+
+    &__icon {
+        @media (min-width: 586px) {
+            display: none;
+        }
+    }
+}
+
+
+.points {
+
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__content {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(226px, 1fr));
+        @include adaptive-value('padding-top', 72, 21, 1);
+        @include adaptive-value('padding-bottom', 72, 21, 1);
+        @media (max-width: 585px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.content-points {
+
+    &__step {
+        color: #fff;
+        @media (max-width: 585px) {
+            color: #1F2229;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 585px) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__icon {
+        @include adaptive-value('font-size', 80, 42, 1);
+        text-align: center;
+        &:not(:last-child) {
+            @include adaptive-value('margin-bottom', 18, 9, 1);
+        }
+        @media (max-width: 771px) {
+            text-align: left;
+        }
+        @media (max-width: 585px) {
+            margin: 0 9px 0 0;
+        }
+    }
+
+    &__title {
+        font-family: $Tele2DisplaySerifBold;
+        @include adaptive-value('font-size', 26, 20, 1);
+        text-align: center;
+        margin: 0 0 18px 0;
+        @media (max-width: 771px) {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 22px;
+        a {
+            color: inherit;
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+}
+
+.subscription {
+    padding: 54px 0 72px 0;
+    position: relative;
+    @include adaptive-value('padding-top', 54, 9, 1);
+    @include adaptive-value('padding-bottom', 72, 36, 1);
+
+    &__triangle {
+        width: 0;
+        height: 0;
+        border-bottom: 248px solid #D7FF38;
+        border-left: 364px solid transparent;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @media (max-width: 768px) {
+            border-bottom: 180px solid #D7FF38;
+            border-left: 150px solid transparent;
+        }
+        @media (max-width: 585px) {
+            display: none;
+        }
+        @media (min-width: 1664px) {
+            display: none;
+        }
+    }
+
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__content {
+        
+    }
+}
+
+.sub {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 5;
+    @media (max-width: 585px) {
+        align-items: center;
+    }
+
+    &__title {
+        font-family: $Tele2DisplaySerifBold;
+        @include adaptive-value('font-size', 38, 24, 1);
+        @include adaptive-value('line-height', 44, 30, 1);
+        &:not(:last-child) {
+            @include adaptive-value('margin-bottom', 27, 18, 1);
+        }
+    }
+
+    &__field {
+        width: 286px;
+        &:not(:last-child) {
+            @include adaptive-value('margin-bottom', 27, 18, 1);
+        }
+        @media (max-width: 585px) {
+            width: 100%;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__input {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 284px;
+        width: 100%;
+        display: block;
+        border-bottom: 0.2rem solid #8f9399;
+        transition: .4s;
+        padding: 0 0 7px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #000;
+        @media (max-width: 585px) {
+            max-width: none;
+        }
+    }
+
+    &__img,
+    &__img_true {
+        position: absolute;
+        right: 0;
+        img {
+            width: 30px;
+        }
+    }
+
+    &__warning_message {
+        color: #D72F4B;
+    }
+
+    &__warning_correct {
+        color: #41A674;
+    }
+
+    &__btn {
+        border-radius: 30px;
+        padding: 19px 45px;
+        background-color: #1F2229;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        &:not(:last-child) {
+            margin: 0 0 9px 0;
+        }
+        @media (max-width: 585px) {
+            padding: 13px 35px;
+        }
+        &:hover {
+            background-color: #8f9399;
+        }
+    }
+
+    &__smalltext {
+        font-size: 12px;
+        line-height: 22px;
+        color: #8F9399;
+        &:not(:last-child) {
+            margin: 0 0 18px 0;
+        }
+    }
+
+    &__activation-text {
+    }
+}
+
+.text-active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (max-width: 585px) {
+        align-items: center;
+    }
+    &__title {
+        color: #000;
+        @include adaptive-value('font-size', 16, 14, 1);
+        @include adaptive-value('line-height', 20, 18, 1);
+        &:not(:last-child) {
+            margin: 0 0 18px 0;
+        }
+    }
+
+    &__text {
+        color: #8F9399;
+        @include adaptive-value('font-size', 14, 12, 1);
+        @include adaptive-value('line-height', 16, 14, 1);
+        max-width: 500px;
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+}
+
+.questions {
+    background-color: #F9F9FA;
+
+    &__container {
+    }
+
+    &__body {
+        @include adaptive-value('padding-top', 54, 27, 1);
+        @include adaptive-value('padding-bottom', 54, 27, 1);
+    }
+
+    &__content {
+    }
+
+    &__title {
+        font-family: $Tele2DisplaySerifBold;
+        @include adaptive-value('font-size', 34, 24, 1);
+        line-height: 44px;
+        &:not(:last-child) {
+            margin: 0 0 18px 0;
+        }
+    }
+
+    &__accordion {
+    }
+}
+
+.accordion {
+    &:not(:last-child) {
+        margin: 0 0 9px 0;
+    }
+    @media (max-width: 585px) {
+        &:not(:last-child) {
+            margin: 0 0 18px 0;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-family: $Tele2DisplaySerifBold;
+        @include adaptive-value('font-size', 22, 16, 1);
+        @include adaptive-value('line-height', 44, 22, 1);
+    }
+
+    &__arrow {
+        font-size: 8px;
+        transform: rotate(-180deg);
+        transition: transform 0.3s ease 0s;
+    }
+ 
+    &__arrow-transform {
+        font-size: 8px;
+        transform: rotate(0deg);
+        cursor: pointer;
+    }
+
+    &__content {
+        @include adaptive-value('font-size', 18, 14, 1);
+        @include adaptive-value('line-height', 24, 20, 1);
+        line-height: 24px;
+        overflow: hidden;
+        max-height: 0;
+        transition: all 0.3s ease 0s;
+        a {
+            color: #1F2229;
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+}
+
+.active .accordion__content {
+    max-height: 1000px;
+    transition: all 1s;
+  }
+
+
+.footer {
+    background-color: #1F2229;
+    min-height: 165px;
+    &__container {
+    }
+
+    &__body {
+        @include adaptive-value('padding-top', 36, 27, 1);
+    }
+
+    &__content {
+        color: #8F9399;
+        @include adaptive-value('font-size', 14, 12, 1);
+        @include adaptive-value('line-height', 16, 14, 1);
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+
+.banner {
+
+    &__body {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
+    &__bg {
+        background: url(../img/desktop.webp) no-repeat right bottom;
+        height: 100%;
+        background-size: auto 500px;
+        @media (max-width: 585px) {
+            background: url(../img/mobile.webp) no-repeat left bottom;
+            background-size: auto 75vw;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        @include adaptive-value('padding-top', 128, 18, 1);
+    }
+
+    &__auth {
+        max-width: 486px;
+    }
+}
+
+.auth {
+
+    &__wrap {
+    }
+
+    &__body {
+    }
+
+    &__content {
+    }
+
+    &__title {
+        font-family: $Tele2DisplaySerifBold;
+        @include adaptive-value('font-size', 38, 24, 1);
+        &:not(:last-child) {
+            @include adaptive-value('margin-bottom', 27, 18, 1);
+        }
+    }
+
+    &__field-wrapper {
+    }
+
+    &__btn {
+        border-radius: 30px;
+        padding: 19px 45px;
+        background-color: #1F2229;
+        display: flex;
+        align-self: flex-start;
+        font-family: $Tele2TextSansBold;
+        font-size: 16px;
+        line-height: 22px;
+        color: #fff;
+        @media (max-width: 585px) {
+            padding: 13px 35px;
+            align-self: center;
+        }
+        &:hover {
+            background-color: #8f9399;
+        }
+    }
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    
+		&__field {
+            &:not(:last-child) {
+                margin: 0 0 54px 0;
+            }
+		}
+
+		&__label {
+		}
+
+		&__wrap {
+            display: flex;
+            flex-direction: column;
+		}
+
+        &__label {
+            font-size: 13px;
+            line-height: 18px;
+            color: #8F9399;
+        }
+
+		&__input {
+            max-width: 284px;
+            width: 100%;
+            border-bottom: 2px solid $mainColor;
+            padding: 0 0 7px 0;
+            font-size: 16px;
+            line-height: 22px;
+            @media (max-width: 585px) {
+                max-width: none;
+            }
+		}
+
+        &__input::placeholder {
+            color: $mainColor;
+        }
+
+        &__inputwrpap {
+            display: flex;
+        }
+
+		&__img {
+
+			&_true {
+			}
+		}
+
+		&__warning {
+
+			&_message {
+                color: #D72F4B;
+			}
+
+			&_correct {
+                color: #41A674;
+			}
+		}
+}
+
+
+.top {
+
+    &__wrap {
+    }
+
+    &__body {
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-family: $Tele2DisplaySerifBold;
+        @include adaptive-value('font-size', 38, 24, 1);
+        &:not(:last-child) {
+            @include adaptive-value('margin-bottom', 27, 18, 1);
+        }
+    }
+
+    &__field-wrapper {
+    }
+
+    &__btn {
+        border-radius: 30px;
+        padding: 19px 45px;
+        background-color: #1F2229;
+        display: flex;
+        align-self: center;
+        font-family: $Tele2TextSansBold;
+        line-height: 22px;
+        color: #fff;
+        font-size: 16px;
+        @media (max-width: 585px) {
+            padding: 13px 35px;
+        }
+        &:hover {
+            background-color: #8f9399;
+        }
+        &:disabled {
+            background-color: #8f9399;
+        }
+    }
+
+    &__annotation {
+    }
+}
+
+
+
+.main {
+
+    &__body {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
+    &__bg {
+        background: url(../img/desktopcode.webp) no-repeat right bottom;
+        height: 100%;
+        background-size: auto 500px;
+        @media (max-width: 585px) {
+            background: url(../img/mobilecode.webp) no-repeat left bottom;
+            background-size: auto 75vw;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        @include adaptive-value('padding-top', 128, 18, 1);
+    }
+
+    &__auth {
+        max-width: 486px;
+    }
+}
+
+
+.code {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+        margin: 0 0 18px 0;
+    }
+		&__field {
+            &:not(:last-child) {
+                margin: 0 0 54px 0;
+            }
+		}
+
+		&__label {
+		}
+
+		&__wrap {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            transition: opacity 0.3s ease;
+            max-width: 285px;
+		}
+
+		&__input {
+            width: 100%;
+            flex: 0 0 25%;
+            text-align: center;
+            background-color: #E8E8ED;
+            height: 64px;
+            border-radius: 5px;
+            font-size: 22px;
+            appearance: textfield;
+	        -webkit-appearance: textfield;
+            &:not(:last-child) {
+                margin: 0 3px 0 0;
+            }
+		}
+
+        &__btn {
+            border-radius: 30px;
+            padding: 19px 45px;
+            background-color: #1F2229;
+            display: flex;
+            align-self: center;
+            font-family: $Tele2TextSansBold;
+            line-height: 22px;
+            color: #fff;
+            font-size: 16px;
+            @media (max-width: 585px) {
+                padding: 13px 35px;
+            }
+            &:hover {
+                background-color: #8f9399;
+            }
+		}
+}
+
+input[type="number"] {
+    appearance: textfield;
+	-webkit-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.annotation {
+    &:not(:last-child) {
+        margin: 0 0 54px 0;
+    }
+    &__content {
+        width: 100%;
+        text-align: center;
+        @media (max-width: 585px) {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        color: #8F9399;
+        font-size: 16px;
+        line-height: 22px;
+        span {
+            font-family: $Tele2TextSansBold;
+        }
+    }
+}
+
+
+
+
+
+
+
+

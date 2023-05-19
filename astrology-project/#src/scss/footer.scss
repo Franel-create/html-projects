@@ -1,0 +1,82 @@
+.footer {
+    @include adaptive-value("min-height", 300, 200, 1);
+    &__container {
+    }
+
+
+    &__hr {
+        border: 0;
+        height: 1px;
+        max-width: $maxWidthContainer + px;
+        margin: auto;
+        background-image: linear-gradient(to right, rgba(199, 194, 194, 0), rgba(199, 194, 194, 0.75), rgba(199, 194, 194, 0));
+    }
+
+    &__body {
+        @include adaptive-value("padding-top", 40, 20, 1);
+        padding-bottom: 20px;
+        display: grid;
+        @include adaptive-value("gap", 30, 30, 1);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo {
+        color: $textColor;
+        text-transform: uppercase;
+        @include adaptive-value("font-size", 20, 16, 1);
+        margin: 0 0 15px 0;
+        display: flex;
+    }
+
+    &__text {
+        color: $textColor;
+        font-size: 12px;
+        max-width: 400px;
+        line-height: 150%;
+    }
+
+    &__columns {
+        display: flex;
+        justify-content: space-around;
+        @media (max-width: $md3 + px) {
+            margin: 0 0 20px 0;
+        }
+        @media (max-width: 659px) {
+            justify-content: start;
+        }
+    }
+
+    &__menu {
+        margin: 0 20px 0 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+
+.menu-footer {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        color: #828285;
+        font-size: 14px;
+        line-height: 140%;
+        margin: 0 0 15px 0;
+    }
+
+    &__list {
+        li {
+            margin: 0 0 15px 0;
+        }
+    }
+
+    &__link {
+        color: $textColor;
+    }
+}

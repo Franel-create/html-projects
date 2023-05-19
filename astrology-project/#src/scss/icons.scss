@@ -1,0 +1,29 @@
+._icon-3:before {
+  content: "\e900";
+}
+._icon-4:before {
+  content: "\e901";
+}
+._icon-2:before {
+  content: "\e902";
+}
+._icon-1:before {
+  content: "\e903";
+}
+._icon-arrow-down:before {
+  content: "\e904";
+}
+._icon-pause:before {
+  content: "\e905";
+}
+._icon-play:before {
+  content: "\e906";
+}
+._icon-user:before {
+  content: "\e907";
+  color: #fff;
+}
+._icon-user, ._icon-arrow-down, ._icon-play, ._icon-pause, ._icon-1, ._icon-2, ._icon-3, ._icon-4 {
+  font-family: icons;
+}
+
